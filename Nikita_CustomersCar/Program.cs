@@ -12,8 +12,6 @@ namespace Nikita_CustomersCar
         static void Main(string[] args)
         {
 
-           var cars = from c in Car.CarsList() where Customer.CustomersList().Contains(c as dynamic).Model select new { car = c.Model};
-
            var consumers = from cons in Customer.CustomersList() join car in Car.CarsList() on cons.CarModel equals car.Model select new { customer = cons, auto = car };
 
             foreach (var item in consumers)
