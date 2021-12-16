@@ -11,7 +11,7 @@ namespace Nikita_CustomersCar.Elements
         public string Name { get; private set; }
         public int PhoneNumber { get; private set; }
         public string CarModel { get; private set; }
-        public List<Customer> Customers { get; private set; }
+        public static List<Customer> Customers { get; private set; } = new List<Customer>();
 
         public Customer(string name, int phoneNumber, string carModel)
         {

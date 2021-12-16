@@ -12,7 +12,7 @@ namespace Nikita_CustomersCar.Elements
         public string Producer { get; private set; }
         public int ProductionYear { get; private set; }
         public string Paint { get; private set; }
-        public List<Car> Cars { get; private set; }
+        public static List<Car> Cars { get; private set; } = new List<Car>();
 
         public Car(string model, string producer, int productionYear, string paint)
         {
