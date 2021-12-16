@@ -12,7 +12,6 @@ namespace Nikita_CustomersCar.Elements
         public string Producer { get; private set; }
         public int ProductionYear { get; private set; }
         public string Paint { get; private set; }
-        public static List<Car> Cars { get; private set; } = new List<Car>();
 
         public Car(string model, string producer, int productionYear, string paint)
         {
@@ -23,6 +22,5 @@ namespace Nikita_CustomersCar.Elements
         }
 
         public override string ToString() => $"Model: {Model} \nProducer: {Producer} \nProductionYear: {ProductionYear} \nPaint:{Paint}";
-        public void Add(List<Car> cars, Car auto) => cars.Add(auto);
     }
 }

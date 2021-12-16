@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Elements\Car.cs" />
+    <Compile Include="Elements\CarsCollection.cs" />
     <Compile Include="Elements\Customer.cs" />
+    <Compile Include="Elements\CustomersCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

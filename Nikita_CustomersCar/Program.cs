@@ -11,18 +11,22 @@ namespace Nikita_CustomersCar
     {
         static void Main(string[] args)
         {
-           
-            Customer.Customers.Add(new Customer("Jack", 1353457657, "XC90"));
-            Customer.Customers.Add(new Customer("Jones", 1575677897, "570S"));
-            Customer.Customers.Add(new Customer("Carl", 1464564678, "911"));
+            var consumers = new CustomersCollection();
 
-            Car.Cars.Add(new Car("911", "Porshe", 2011, "Black"));
-            Car.Cars.Add(new Car("570S", "McLaren", 2015, "Orange"));
-            Car.Cars.Add(new Car("XC90", "Volvo", 2008, "White"));
+            consumers.Add(new Customer("Jack", 457657, "XC90"));
+            consumers.Add(new Customer("Jones", 5677897, "570S"));
+            consumers.Add(new Customer("Carl", 4564678, "911"));
 
-            var consumers = from cust in Customer.Customers join car in Car.Cars on cust.CarModel equals car.Model select new { customer = cust, auto = car };
 
-            foreach (var item in consumers)
+            var autos = new CarsCollection();
+
+            autos.Add(new Car("911", "Porshe", 2011, "Black"));
+            autos.Add(new Car("570S", "McLaren", 2015, "Orange"));
+            autos.Add(new Car("XC90", "Volvo", 2008, "White"));
+
+            var customers = from customer in consumers.Customers join car in autos.Cars on customer.CarModel equals car.Model select new { customer = customer, auto = car };
+
+            foreach (var item in customers)
             {
                 Console.WriteLine($"Car info => {item.auto} \nOwner => {item.customer}");
                 Console.WriteLine(new string('-', 32));

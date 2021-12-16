@@ -11,17 +11,16 @@ namespace Nikita_CustomersCar.Elements
         public string Name { get; private set; }
         public int PhoneNumber { get; private set; }
         public string CarModel { get; private set; }
-        public static List<Customer> Customers { get; private set; } = new List<Customer>();
 
         public Customer(string name, int phoneNumber, string carModel)
         {
             Name = name;
             PhoneNumber = phoneNumber;
             CarModel = carModel;
+
         }
 
         public override string ToString() => $"Name: {Name} \nNumber: {PhoneNumber} \nModel: {CarModel}";
-        public void Add(List<Customer> customers, Customer consumer) => customers.Add(consumer);
     }
 }
 
